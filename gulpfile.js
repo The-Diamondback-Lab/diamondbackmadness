@@ -1,9 +1,9 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const rename = require('gulp-rename');
 const cssmin = require('gulp-cssmin');
 const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 
 //error handling
 function handleError(error) {
@@ -12,23 +12,25 @@ function handleError(error) {
 }
 
 //compile sass into css & auto-inject into browsers
-gulp.task('styles', function() {
-  return gulp.src('./src/styles/main.sass')
+gulp.task('sass', function() {
+  return gulp.src('./src/stylesheets/sass/app.sass')
     .pipe(sass())
     .pipe(autoprefixer())
     .on('error', handleError)
-    .pipe(gulp.dest('./src/styles/'))
+    .pipe(gulp.dest('./src/stylesheets/'))
     .pipe(cssmin())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./public/css/'))
+    .pipe(gulp.dest('./public/'));
 });
 
 
 //watch
 gulp.task('watch', function() {
-  gulp.watch('./src/components/**/*').on('change', gulp.series('styles'));
-});
+  gulp.watch('./src/stylesheets/sass/**/*')
+    .on('change', gulp.series('sass'));
 
-gulp.task('default', gulp.parallel('styles', 'watch', function(done) {
+})
+
+gulp.task('default', gulp.parallel('sass', 'watch', function(done) {
   done();
 }));
