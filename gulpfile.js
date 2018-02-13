@@ -20,7 +20,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./src/stylesheets/'))
     .pipe(cssmin())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./src/stylesheets/'))
 });
 
 
