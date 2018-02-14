@@ -1,0 +1,22 @@
+/* HELPER CLASSES -- HELPERS.SASS */
+
+/**
+ * Wrapper class to help with page margins and keeping elements contained
+ * properly.
+ */
+.wrapper
+  height: 100%
+  width: 100%
+  max-width: $max-width
+
+/**
+ * Helper class to truncate and add ellipsis to a string too long for it to fit
+ * on a single line.
+ * 
+ * 1. Prevent content from wrapping, forcing it on a single line.
+ * 2. Add ellipsis at the end of the line.
+ */
+.ellipsis
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden

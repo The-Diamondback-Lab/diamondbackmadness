@@ -1,0 +1,54 @@
+/**
+ * Mixins
+ */
+
+/**
+ * Display flex mixin
+ */
+=setDisplayFlex($flexDir, $align, $justify)
+  display: flex !important
+  flex-direction: $flexDir !important
+  align-items: $align !important
+  justify-content: $justify !important
+  @content
+
+/**
+ * Background image mixin
+ */
+=setBkgImg($url, $pos, $size)
+  background:
+    image: url("#{$url}")
+    size: $size
+    repeat: no-repeat
+    position: $pos
+  @content
+
+/**
+ * Button color and hover color mixin
+ */
+=setBtnBkgAndHover($color)
+  background-color: $color
+  &:hover
+    background-color: darken($color, 5%)
+
+/**
+ * Transition mixin
+ */
+=transition($type, $duration, $timing, $delay)
+  transition: $type $duration $timing $delay
+
+/**
+ * Animation mixin
+ */
+=animation($name, $duration, $timing, $delay, $count, $direction)
+  animation: $name, $duration, $timing, $delay, $count, $direction
+  @content
+
+/**
+ * Hover, active, and focus mixin
+ */
+=hocus
+  &:hover,
+  &:active,
+  &:focus
+    @content

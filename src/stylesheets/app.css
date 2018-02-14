@@ -1,0 +1,82 @@
+/**
+ * Mixins
+ */
+/**
+ * Display flex mixin
+ */
+/**
+ * Background image mixin
+ */
+/**
+ * Button color and hover color mixin
+ */
+/**
+ * Transition mixin
+ */
+/**
+ * Animation mixin
+ */
+/**
+ * Hover, active, and focus mixin
+ */
+/* HELPER CLASSES -- HELPERS.SASS */
+/**
+ * Wrapper class to help with page margins and keeping elements contained
+ * properly.
+ */
+.wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 80%; }
+
+/**
+ * Helper class to truncate and add ellipsis to a string too long for it to fit
+ * on a single line.
+ *
+ * 1. Prevent content from wrapping, forcing it on a single line.
+ * 2. Add ellipsis at the end of the line.
+ */
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+/* BEGIN BASE STYLES -- BASE-DIR.SASS */
+/* COMMON STYLES - COMMON.SASS */
+* {
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+
+*,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+html, body {
+  overflow: hidden;
+  font-family: "Circular Std";
+  color: rgba(37, 37, 37, 0.6); }
+
+h1, h2, h3, h4, h5, h6, ol, ul {
+  font-weight: 700; }
+
+p, a, li {
+  font-weight: 400; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    cursor: pointer; }
+
+/* FONTS - FONTS.SASS */
+/* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SASS */
+/* BEGIN PAGE SPECIFIC STYLES -- PAGES-DIR.SASS */
+/**
+ * HOME PAGE STYLES
+ */
+/**
+ * CONTACT PAGE STYLES
+ */
