@@ -1,8 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDom from 'react-dom';
 
 import App from './components/app';
 
 import './stylesheets/app.min.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDom.render(
+  <App />,
+  document.querySelector('#root')
+);
