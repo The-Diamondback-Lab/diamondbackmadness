@@ -1,0 +1,26 @@
+/* HEADER STYLES - HEADER.SASS */
+header
+	+flex(row, center, center)
+	width: 100vw
+	padding: 2.25em 0
+
+	.wrapper
+		+flex(row, center, space-between)
+
+		#title
+			font-size: 1.1em
+
+			@media all and (max-width: 615px)
+				font-size: 1em
+
+			h1
+				color: $red !important
+				margin: 0
+
+				@media all and (max-width: 615px)
+					color: $black !important
+
+				span
+					color: $white !important
+
+
