@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Button from '../components/button';
 
@@ -20,14 +20,14 @@ export default class Home extends Component {
     return (
       <div id="home">
         <div className="wrapper">
-          
+
           <h1>
             Brackets.
-            <br />Are.
-            <br />Back.
+            <br/>Are.
+            <br/>Back.
           </h1>
-          
-          <Button id='btn-home' href='/vote' text='VOTE NOW' />
+
+          <Button id='btn-home' href='/vote' text='VOTE NOW'/>
         </div>
       </div>
     );

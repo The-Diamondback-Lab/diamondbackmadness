@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import $ from 'jquery';
 
-import database from '../config/firebase';
+import DATABASE from '../config/firebase';
 
-import Company from '../components/companyblock';
-
+import Company from '../components/company';
 
 export default class Vote extends Component {
 
@@ -15,20 +14,30 @@ export default class Vote extends Component {
       teams: []
     }
   }
-	
-	componentDidMount() {
-    $('header').css('background-color', '#252525');
-    this.setState({teams: database.ref()});
-    alert(database.ref());
+
+  /* issue here */
+  componentDidMount() {
+    document
+      .getElementById('header')
+      .style
+      .backgroundColor = '#252525';
+    let data = null;
+    DATABASE
+      .ref('companies')
+      .once('value')
+      .then((snapshot) => {
+        data = snapshot.val(); //returning null
+      });
+    alert(data);
   }
 
   render() {
     return (
       <div id="vote">
         <div className="wrapper">
-          
-          <Company />
-            
+
+          <Company/>
+
         </div>
       </div>
     );
