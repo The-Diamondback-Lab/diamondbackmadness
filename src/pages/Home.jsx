@@ -1,19 +1,21 @@
+//react imports
 import React, {Component} from 'react';
 
+//component imports
 import Button from '../components/button';
-
-import $ from 'jquery';
 
 export default class Home extends Component {
 
   componentDidMount() {
-    $('header').css('background-color', 'transparent');
-    $('header').css('position', 'absolute');
-    $('header').css('z-index', '10');
+    let header = document.getElementById('header');
+    header.style.backgroundColor = 'transparent';
+    header.style.position = 'absolute';
+    header.style.zIndex = 10;
   }
 
   componentWillUnmount() {
-    $('header').css('position', 'relative');
+    let header = document.getElementById('header');
+    header.style.position = 'relative';
   }
 
   render() {
