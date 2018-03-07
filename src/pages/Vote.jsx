@@ -25,7 +25,18 @@ export default class Vote extends Component {
     return (
       <div id="vote">
         <div className="wrapper">
-          <h1>Vote</h1>
+          <details id="active-companies">
+            <summary>
+              Current Matchups
+            </summary>
+            <div className='teams'></div>
+          </details>
+          <details id="eliminated-companies">
+            <summary>
+              Past Matchups
+            </summary>
+            <div className='teams'></div>
+          </details>
         </div>
       </div>
     );
