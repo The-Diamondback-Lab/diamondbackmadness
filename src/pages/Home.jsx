@@ -2,9 +2,13 @@
 import React, {Component} from 'react';
 
 //component imports
-import Button from '../components/button';
+import Button from '../components/Button';
 
 export default class Home extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   componentDidMount() {
     let header = document.getElementById('header');

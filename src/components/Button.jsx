@@ -33,13 +33,13 @@ export default class Button extends Component {
   render() {
     return (
         (!this.state.hasOnClick)
-        ? <Link className='btn' id={this.state.id} href={this.state.href}>
+        ? <Link className='btn' id={this.state.id} to={this.state.href}>
           {this.state.text}
         </Link>
         : <Link
           className='btn'
           id={this.state.id}
-          href={this.state.href}
+          to={this.state.href}
           onClick={this.onClick}>
           {this.state.text}
         </Link>
