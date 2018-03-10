@@ -13,6 +13,8 @@ export default class Bracket extends Component {
       .bind(this);
   }
 
+  // TODO: figure why delta phi epsilon is getting matched twice and why theyre
+  // competitor field stays blank
   getMatches = () => {
     let matches = [];
     let max = this.props.participants.length - 1;

@@ -132,12 +132,15 @@ export default class Vote extends Component {
   }
 
   render = () => {
-    // let past0 = []; for (let i = 0; i < this.state.week0.length / 2; i++) {   let
-    // participant = this     .state     .week0[i];   let matches =
-    // Array.from(participant.matches);   let competitor = matches[0];
-    //
-    // let p = <p key={i}>{participant.name + " vs " + competitor.name}</p>
-    // past0.push(p); }
+    let past0 = [];
+    for (let i = 0; i < this.state.week0.length / 2; i++) {
+      let participant = this
+        .state
+        .week0[i];
+      let competitor = participant.competitor;
+      let p = <p className='past-matchup' key={i}>{participant.name + ' vs ' + competitor}</p>
+      past0.push(p);
+    }
 
     return (
       <div id="vote">
@@ -157,30 +160,30 @@ export default class Vote extends Component {
 
           <div className='past-matchups'>
             <h2>Past Matchups</h2>
-            <details open={true}>
-              <summary>March 12 - 16th</summary>
+            <div className='past-container'>
+              <details className='week'>
+                <summary>March 12 - 16th</summary>
+                {past0}
+              </details>
+              <details className='week'>
+                <summary>March 16 - 20th</summary>
 
-            </details>
-            <details open={true}>
-              <summary>March 16 - 20th</summary>
+              </details>
+              <details className='week'>
+                <summary>March 20 - 24th</summary>
 
-            </details>
-            <details open={true}>
-              <summary>March 20 - March 34th</summary>
+              </details>
+              <details className='week'>
+                <summary>March 24 - 28th</summary>
 
-            </details>
-            <details open={true}>
-              <summary>March 24 - March 28th</summary>
-
-            </details>
-            <details open={true}>
-              <summary>March 28 - March 30th</summary>
-
-            </details>
-            <details open={true}>
-              <summary>March 30 - April 2nd</summary>
-
-            </details>
+              </details>
+              <details className='week'>
+                <summary>March 28 - 30th</summary>
+              </details>
+              <details className='week'>
+                <summary>March 30 - April 2nd</summary>
+              </details>
+            </div>
           </div>
         </div>
       </div>

@@ -25,9 +25,15 @@ export default class Match extends Component {
     Utilities
       .search(this.props.week, this.props.comp1.name)
       .then((key) => {
-        let compRef = DATABASE.ref(this.props.week + '/' + key);
-        compRef.update({competitor: this.props.comp2.name});
+        let comp1Ref = DATABASE.ref(this.props.week + '/' + key);
+        comp1Ref.update({competitor: this.props.comp2.name});
+        Utilities
+          .search(this.props.week, this.props.comp2.name)
+          .then((key) => {
+            let comp2Ref = DATABASE.ref(this.props.week + '/' + key);
+            comp2Ref.update({competitor: this.props.comp1.name});
 
+          });
       });
   }
 

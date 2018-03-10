@@ -23,4 +23,27 @@
 
 
     .past-matchups
+      +flex(column, flex-start, flex-start)
       width: 100%
+
+      .past-container
+        +flex(row, flex-start, flex-start)
+        width: 100%
+
+        .week:last-of-type
+          margin: 0 !important
+
+        .week
+          margin-right: 1em
+          width: 16.667%
+
+          summary
+            background-color: darken($red, 7.5%)
+            color: $white !important
+            font-size: .95em
+            font-weight: 600
+            padding: 1em
+
+          .past-matchup
+            font-weight: 400
+            font-size: .9em
