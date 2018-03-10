@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom';
 export default class Header extends Component {
 
   render() {
-    let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    // let width = window.innerWidth || document.documentElement.clientWidth ||
+    // document.body.clientWidth;
     return (
       <header id='header'>
         <div className="wrapper">
@@ -14,13 +15,8 @@ export default class Header extends Component {
               DBK<span>MADNESS</span>
             </h1>
           </Link>
+          <div className="addthis_sharing_toolbox"></div>
 
-          {
-            /* Go to www.addthis.com/dashboard to customize your tools */
-            (width <= 615)
-              ? <div className="addthis_sharing_toolbox_mzm7"></div>
-              : <div className="addthis_sharing_toolbox"></div>
-          }
         </div>
       </header>
     );

@@ -20,8 +20,8 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <Header/>
-          <Route exact="exact" path='/' component={Home}/>
-          <Route exact="exact" path='/vote' component={Vote}/> {this.props.children}
+          <Route exact={true} path='/' component={Home}/>
+          <Route exact={true} path='/vote' component={Vote}/> {this.props.children}
         </div>
       </BrowserRouter>
     );

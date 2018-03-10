@@ -9,20 +9,24 @@ export default class Company extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      competitor: -1, //int - rival company uid
+      competitor: '', //string
       description: '', //string
-      hasWon: false, //boolean
-      id: -1, //int - company uid
+      eliminated: false, //boolean
       name: '', //string
       votes: 0 //int
     }
-    this.onClick = this.onClick.bind(this);
+    this.onClick = this
+      .onClick
+      .bind(this);
   }
+
+  onClick = () => {}
 
   componentDidMount() {
     this.setState(
-      {competitor: this.props.competitor, description: `${this.props.description}`, hasWon: this.props.hasWon, name: `${this.props.name}`, votes: this.props.votes}
+      {competitor: `${this.props.competitor}`, description: `${this.props.description}`, eliminated: this.props.hasWon, name: `${this.props.name}`, votes: this.props.votes}
     );
+    console.log(this.state);
   }
 
   render() {
@@ -35,12 +39,13 @@ export default class Company extends Component {
         </div>
 
         <div className='company-modal'>
+
           <div className='competitor'>
-            <p className='comapny-name'></p>
-            <p className='company-description'></p>
+            <p className='comapny-name'>{this.state.name}</p>
+            <p className='company-description'>{this.state.description}</p>
             <Button
               className='company-votebtn'
-              company={this.state.id}
+              company={this.state.name}
               hasOnClick={true}
               text='VOTE'/>
           </div>

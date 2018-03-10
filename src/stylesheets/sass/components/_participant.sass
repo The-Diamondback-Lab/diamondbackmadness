@@ -1,0 +1,27 @@
+/* PARICIPANT STYLES - PARICIPANT.SASS */
+
+.participant
+  +flex(row, center, space-between)
+  background-color: darken($red, 7.5%)
+  border: none
+  color: $black
+  padding: 1em
+  outline: none
+  width: 100%
+  &:hover
+    background-color: darken($red, 10%)
+    cursor: pointer
+
+  &:first-of-type
+    border-bottom: 2px solid rgba($black, .15)
+
+  .p-name
+    font:
+      size: .95em
+      weight: 700
+    margin: 0
+    text-align: left
+    width: 85%
+
+  .info
+    font-size: 1.25em

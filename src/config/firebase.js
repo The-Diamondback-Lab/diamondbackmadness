@@ -16,10 +16,11 @@ const config = {
   messagingSenderId: FIREBASE_MESSAGING_SENDER_ID
 };
 
-const DATABASE = firebase.initializeApp(config).database();
+const DATABASE = firebase
+  .initializeApp(config)
+  .database();
 
-firebase.database.enableLogging((message) => {
-  console.log("[FIREBASE]", message);
-});
+// firebase.database.enableLogging((message) => {   console.log("[FIREBASE]",
+// message); });
 
 export default DATABASE;

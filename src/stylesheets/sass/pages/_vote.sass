@@ -1,11 +1,26 @@
-/* VOTE PAGE STYLES - VOTE.SASS */
+/* VOTE PAGE STYLES - VOTE.SASS
 
 #vote
-	+flex(row, center, center)
-	width: 100vw
-	height: 100vh
-	margin: 2em 0
+  +flex(row, center, center)
+  width: 100vw
 
-	.wrapper
-		+flex(row, center, flex-start)
-		
+  .wrapper
+    +flex(column, center, center)
+
+    .brackets-container
+      +flex(column, center, center)
+      background-color: $gray
+      width: 100vw
+
+      h2
+        color: $black
+
+      .brackets
+        +flex(row, flex-start, space-evenly)
+        height: 500px
+        overflow: scroll
+        width: 100%
+
+
+    .past-matchups
+      width: 100%

@@ -1,9 +1,17 @@
 //MIXINS
 =flex($flexDir, $align, $justify)
   display: flex !important
-  flex-direction: $flexDir !important
-  align-items: $align !important
-  justify-content: $justify !important
+  flex-direction: $flexDir
+  align-items: $align
+  justify-content: $justify
+
+  @content
+
+=grid($gridType, $rows, $columns)
+  display: $gridType !important
+  grid-template-rows: $rows
+  grid-template-columns: $columns
+
   @content
 
 =setBkgImg($url, $pos, $size)
@@ -12,10 +20,12 @@
     size: $size
     repeat: no-repeat
     position: $pos
+
   @content
 
 =setBtnBkgAndHover($color)
   background-color: $color
+
   &:hover
     background-color: darken($color, 5%)
 
@@ -24,6 +34,7 @@
 
 =animation($name, $duration, $timing, $delay, $count, $direction)
   animation: $name, $duration, $timing, $delay, $count, $direction
+
   @content
 
 =hocus

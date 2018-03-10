@@ -1,39 +1,62 @@
-/* HOME PAGE STYLES - HOME.SASS */
+/* HOME PAGE STYLES - HOME.SASS
 
 #home
-	+flex(row, center, center)
-	+setBkgImg('/assets/img/home-bkg.jpg', center center, cover)
-	width: 100vw
-	height: 100vh
+  +flex(row, center, center)
+  +setBkgImg("/assets/img/home-bkg.jpg", center center, cover)
 
-	@media all and (max-width: 615px)
-		background-image: none
-		background-color: $red
+  width: 100vw
+  height: 100vh
 
+  /* height media queries */
+  @media all and (max-height: 415px)
+    height: auto
+    padding: 2em 0
 
-	.wrapper
-		+flex(column, center, space-around)
-		height: auto
+  /* width media queries */
+  @media all and (max-width: 615px)
+    background-image: none
+    background-color: darken($red, 7.5%)
 
-		h1
-			align-self: flex-start
-			font-size: 7.5em
-			line-height: .9em
-			margin: 0 0 1.25em 0
+  .wrapper
+    +flex(column, center, space-around)
 
-			@media all and (max-width: 1050px)
-				font-size: 6em
-			@media all and (max-width: 615px)
-				font-size: 5.75em
-				margin-bottom: .25em
-			@media all and (max-width: 500px)
-				font-size: 5em
+    height: auto
 
-		#btn-home
-			+setBtnBkgAndHover($black)
-			align-self: flex-end
-			color: $white
-			font-size: 1.25em
+    h1
+      align-self: flex-start
+      font-size: 7.5em
+      line-height: 0.9em
+      margin: 0 0 1.25em 0
 
-			@media all and (max-width: 1050px)
-				font-size: 1em
+      /* height media queries */
+      @media all and (max-height: 415px)
+        margin: .75em 0 0 0
+
+      /* width media queries */
+      @media all and (max-width: 1050px)
+        font-size: 6em
+
+      @media all and (max-width: 615px)
+        font-size: 5.75em
+        margin-bottom: 0.25em
+
+      @media all and (max-width: 500px)
+        font-size: 5em
+
+      @media all and (max-width: 360px)
+        font-size: 4em
+
+    #btn-home
+      +setBtnBkgAndHover($black)
+
+      align-self: flex-end
+      color: $white
+      font-size: 1.25em
+
+      /* height media queries */
+      @media all and (max-height: 415px)
+        margin-bottom: .5em
+
+      /* width media queries */
+      @media all and (max-width: 1050px)
+        font-size: 1em

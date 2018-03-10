@@ -4,17 +4,25 @@ header
 	width: 100vw
 	padding: 2.25em 0
 
+	@media all and (max-width: 615px)
+		padding: 0
+
 	.wrapper
 		+flex(row, center, space-between)
+
+		@media all and (max-width: 615px)
+			+flex(column, center, space-between)
+		  height: 100vh
+			padding: 2.25em 0
 
 		#title
 			font-size: 1.1em
 
 			@media all and (max-width: 615px)
-				font-size: .9em
+				font-size: .95em
 
 			h1
-				color: $red !important
+				color: darken($red, 7.5%) !important
 				margin: 0
 
 				@media all and (max-width: 615px)
@@ -22,5 +30,3 @@ header
 
 				span
 					color: $white !important
-
-

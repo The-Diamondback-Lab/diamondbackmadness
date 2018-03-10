@@ -6,10 +6,6 @@ import Button from '../components/Button';
 
 export default class Home extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     let header = document.getElementById('header');
     header.style.backgroundColor = 'transparent';
