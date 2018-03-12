@@ -1,0 +1,19 @@
+/* BRACKET COLUMN STYLES - ROUND.SASS */
+
+.round
+  display: block
+  flex: 1
+  height: 100%
+  padding: 0 .25em
+
+  .round-title
+    display: none
+
+    @media all and (max-width: 900px)
+      display: block
+
+  .match-container
+    +flex(column, stretch, center)
+
+.active
+  order: -1
