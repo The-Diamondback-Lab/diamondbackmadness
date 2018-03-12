@@ -18,9 +18,6 @@ export default class VoteButton extends Component {
   }
 
   updateVotes = (e) => {
-    let id = 'vote-' + (
-      this.props.participant.name
-    ).replace(/ /g, '');
     Utilities
       .search(this.props.week, this.props.participant.name)
       .then((ref) => {
