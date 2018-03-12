@@ -44,7 +44,7 @@ export default class Round extends Component {
 
     if (this.props.participants.length !== 1) {
       let max = this.props.participants.length - 1;
-      for (let i = 0; i < max; i++) {
+      for (let i = 0; i < max / 2; i++) {
         let comp1 = this
           .props
           .participants[i];
