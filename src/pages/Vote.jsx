@@ -19,6 +19,9 @@ export default class Vote extends Component {
       week3: [],
       week4: []
     }
+
+    this.ads = ["/assets/img/0.jpg","/assets/img/1.gif","/assets/img/2.gif","/assets/img/3.gif"];
+    this.ads.sort(() => Math.random() * 2 - 1); //shuffle list of ad numbers
   }
 
   componentWillMount = () => {
@@ -111,12 +114,22 @@ export default class Vote extends Component {
     return (
       <div id="vote">
         <div className='wrapper' id='vote-wrapper'>
+          <div className = 'ads'>
+            <img src = "/assets/img/banner2.jpg" width="40%" height="5%" alt="ad" />
+            <br />
+            <br />
+            <img className = 'ad' src = {this.ads[0]} width="15%" height="10%" alt="ad" />
+            <img className = 'ad' src = {this.ads[1]} width="15%" height="10%" alt="ad" />
+            <img className = 'ad' src = {this.ads[2]} width="15%" height="10%" alt="ad" />
+            <img className = 'ad' src = {this.ads[3]} width="15%" height="10%" alt="ad" />
+          </div>
+
           <div className='round-titles'>
-            <h4 className='round-title'>March 12 - 16th</h4>
-            <h4 className='round-title'>March 16 - 20th</h4>
-            <h4 className='round-title'>March 20 - 24th</h4>
-            <h4 className='round-title'>March 24 - 28th</h4>
-            <h4 className='round-title'>March 28 - 30th</h4>
+            <h4 className='round-title'>March 13 - 17th</h4>
+            <h4 className='round-title'>March 17 - 21th</h4>
+            <h4 className='round-title'>March 21 - 25th</h4>
+            <h4 className='round-title'>March 25 - 29th</h4>
+            <h4 className='round-title'>March 29 - 31st</h4>
           </div>
 
           <div className='rounds'>
@@ -125,6 +138,16 @@ export default class Vote extends Component {
             <Round week={2} active={false} participants={this.state.week2}/>
             <Round week={3} active={false} participants={this.state.week3}/>
             <Round week={4} active={false} participants={this.state.week4}/>
+          </div>
+
+          <div className = 'ads'>
+            <img src = "/assets/img/banner1.jpg" width="40%" height="5%" alt="ad" />
+            <br />
+            <br />
+            <img className = 'ad' src = {this.ads[0]} width="15%" height="10%" alt="ad" />
+            <img className = 'ad' src = {this.ads[1]} width="15%" height="10%" alt="ad" />
+            <img className = 'ad' src = {this.ads[2]} width="15%" height="10%" alt="ad" />
+            <img className = 'ad' src = {this.ads[3]} width="15%" height="10%" alt="ad" />
           </div>
         </div>
       </div>
