@@ -335,6 +335,9 @@ header {
           .modal .modal-guts .competitors .comp button:hover {
             cursor: pointer;
             background-color: #c1152e; }
+          @media all and (max-width: 500px) {
+            .modal .modal-guts .competitors .comp button {
+              font-size: .95em; } }
     .modal .modal-guts .winner-name {
       -ms-flex-item-align: end;
           align-self: flex-end;
