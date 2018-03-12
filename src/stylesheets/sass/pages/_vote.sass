@@ -2,48 +2,28 @@
 
 #vote
   +flex(row, center, center)
+  background-color: rgba($gray, .45)
   width: 100vw
 
-  .wrapper
-    +flex(column, center, center)
+  #vote-wrapper
+    +flex(column, stretch, flex-start)
 
-    .brackets-container
-      +flex(column, center, center)
-      background-color: $gray
-      width: 100vw
+    .round-titles
+      +flex(row, center, flex-start)
+      margin: 1em 0
 
-      h2
-        color: $black
+      @media all and (max-width: 900px)
+        display: none !important
 
-      .brackets
-        +flex(row, flex-start, space-evenly)
-        height: 500px
-        overflow: scroll
-        width: 100%
+      .round-title
+        color: rgba($black, .75)
+        font-weight: 500
+        margin: 0
+        text-align: center
+        width: 20%
 
+    .rounds
+      +flex(row, stretch, center)
 
-    .past-matchups
-      +flex(column, flex-start, flex-start)
-      width: 100%
-
-      .past-container
-        +flex(row, flex-start, flex-start)
-        width: 100%
-
-        .week:last-of-type
-          margin: 0 !important
-
-        .week
-          margin-right: 1em
-          width: 16.667%
-
-          summary
-            background-color: darken($red, 7.5%)
-            color: $white !important
-            font-size: .95em
-            font-weight: 600
-            padding: 1em
-
-          .past-matchup
-            font-weight: 400
-            font-size: .9em
+      @media all and (max-width: 900px)
+        +flex(column, stretch, center)

@@ -1,5 +1,11 @@
 /* MATCH STYLES - MATCH.SASS */
 
 .match
-  margin-bottom: 2em
-  width: 100%
+  +flex(column, center, center)
+  cursor: pointer
+  flex: 0 1 auto
+  margin: 0 0 1.5em 0
+
+  .participants
+    +flex(column, stretch, flex-start)
+    width: 100%

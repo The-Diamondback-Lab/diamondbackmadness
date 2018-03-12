@@ -2,14 +2,13 @@
 
 .participant
   +flex(row, center, space-between)
-  background-color: darken($red, 7.5%)
+  background-color: $red
   border: none
-  color: $black
+  color: rgba(white, .75)
   padding: 1em
   outline: none
-  width: 100%
   &:hover
-    background-color: darken($red, 10%)
+    background-color: darken($red, 5%)
     cursor: pointer
 
   &:first-of-type
@@ -25,3 +24,6 @@
 
   .info
     font-size: 1.25em
+
+.participant-empty
+  color: $red

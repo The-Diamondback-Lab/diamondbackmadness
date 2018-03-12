@@ -3,16 +3,16 @@
   +flex(row, center, center)
   align-items: center
   justify-content: center
-  height: 100%
+  height: 100vh
   left: 0
-  position: absolute
+  position: fixed
   top: 0
   width: 100vw
   z-index: 10
 
   .modal-overlay
-    background-color: rgba($black, .15)
-    position: absolute
+    background-color: rgba($black, .25)
+    position: fixed
     height: 100%
     width: 100%
     z-index: 11
@@ -20,16 +20,23 @@
   .modal-guts
     +flex(column, flex-start, space-evenly)
     background-color: $white
-    overflow:
-      x: hidden
-      y: scroll
+    overflow: scroll
     padding: 1.5em 3em
     width: 80%
     z-index: 12
 
+    @media all and (max-width: 500px)
+      height: 90%
+      width: 90%
+
     h1
       border-bottom: 5px solid darken($red, 7.5%)
       margin: .5em 0
+
+      @media all and (max-width: 500px)
+        font-size: 1.5em
+        margin: 0 0 -.5em 0
+
 
     #close
       align-self: flex-end
@@ -42,24 +49,41 @@
 
     .competitors
       +flex(row, flex-start, space-evenly)
-      height: 275px
+
+      @media all and (max-width: 1080px)
+        +flex(column, stretch, flex-start)
 
       .comp:first-of-type
-        padding: 0 1.5em 0 0 !important
+        padding: 0 1.5em 0 0
 
       .comp
         +flex(column, flex-start, space-between)
         height: 250px
         margin: 1em 0
+        overflow: scroll
         padding-left: 1.5em
         width: 50%
+
+        @media all and (max-width: 1080px)
+          height: auto
+          padding: 0 0 1em 0 !important
+          width: 100%
 
         h2
           margin: 0
 
+        @media all and (max-width: 500px)
+          font-size: .85em
+
         .description
           font-size: .95em
           margin: -1em 0
+
+          @media all and (max-width: 1080px)
+            margin: 1em 0
+
+          @media all and (max-width: 500px)
+            font-size: 1.05em
 
         button
           align-self: flex-end
@@ -68,3 +92,11 @@
           &:hover
             cursor: pointer
             background-color: darken($red, 7.5%)
+
+    .winner-name
+      align-self: flex-end
+      background-color: $red
+      color: $white
+      margin-top: -1em
+      padding: .9em 2.75em
+      text-transform: uppercase

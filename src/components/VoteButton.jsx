@@ -9,12 +9,12 @@ export default class VoteButton extends Component {
 
   constructor(props) {
     super(props);
-    this.onClick = this
-      .onClick
+    this.updateVotes = this
+      .updateVotes
       .bind(this);
   }
 
-  onClick = (e) => {
+  updateVotes = (e) => {
     Utilities
       .search(this.props.week, this.props.participant.name)
       .then((ref) => {
@@ -28,7 +28,7 @@ export default class VoteButton extends Component {
 
   render() {
     return (
-      <button className='btn' id={this.props.id} onClick={this.onClick}>
+      <button className='btn vote-btn' id={this.props.id} onClick={this.updateVotes}>
         CAST VOTE
       </button>
     );

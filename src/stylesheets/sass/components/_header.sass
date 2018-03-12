@@ -1,32 +1,78 @@
 /* HEADER STYLES - HEADER.SASS */
 header
 	+flex(row, center, center)
+	padding: 1.5em 0
 	width: 100vw
-	padding: 2.25em 0
 
-	@media all and (max-width: 615px)
-		padding: 0
-
-	.wrapper
+	#header-wrapper
 		+flex(row, center, space-between)
 
-		@media all and (max-width: 615px)
-			+flex(column, center, space-between)
-		  height: 100vh
-			padding: 2.25em 0
-
 		#title
-			font-size: 1.1em
+			font-size: .8em
+			&:hover
+				letter-spacing: .5em
 
 			@media all and (max-width: 615px)
 				font-size: .95em
 
+			@media all and (max-width: 360px)
+				font-size: .9em
+
 			h1
-				color: darken($red, 7.5%) !important
+				color: $red !important
 				margin: 0
 
 				@media all and (max-width: 615px)
-					color: $black !important
+					color: $white !important
+					font-size: 1.75em
 
 				span
-					color: $white !important
+					color: $black
+
+		#add-this
+			div
+				div
+					a
+						.at-icon-wrapper
+							line-height: 22.5px !important
+							height: 22.5px !important
+							width: 22.5px !important
+
+							@media all and (max-width: 615px)
+								line-height: 25px !important
+								height: 25px !important
+								width: 25px !important
+
+							@media all and (max-width: 360px)
+								line-height: 18px !important
+								height: 18px !important
+								width: 18px !important
+
+							.at-icon
+								height: 22.5px !important
+								width: 22.5px !important
+
+								@media all and (max-width: 615px)
+									height: 25px !important
+									width: 25px !important
+
+								@media all and (max-width: 360px)
+									height: 18px !important
+									width: 18px !important
+
+
+
+.home
+	background-color: transparent
+	left: 0
+	position: absolute
+	top: 0
+	z-index: 2
+
+.vote
+	background-color: $black
+	position: relative
+	#header-wrapper
+		#title
+			span
+				color: $white

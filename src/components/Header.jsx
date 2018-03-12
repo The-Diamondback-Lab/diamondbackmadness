@@ -4,19 +4,17 @@ import {Link} from 'react-router-dom';
 
 export default class Header extends Component {
 
-  render() {
-    // let width = window.innerWidth || document.documentElement.clientWidth ||
-    // document.body.clientWidth;
+  render = () => {
     return (
       <header id='header'>
-        <div className="wrapper">
+        <div className="wrapper" id='header-wrapper'>
           <Link exact="exact" to='/' id="title">
             <h1>
-              DBK<span>MADNESS</span>
+              DBK<span id='madness'>MADNESS</span>
             </h1>
           </Link>
-          <div className="addthis_sharing_toolbox"></div>
 
+          <div className="addthis_sharing_toolbox" id="add-this"></div>
         </div>
       </header>
     );

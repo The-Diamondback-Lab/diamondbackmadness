@@ -21,13 +21,6 @@
       "votes": 0
     },
     {
-      "description" : "We teach and dance Argentine tango to anyone who has a soft spot for dancing!",
-      "eliminated" : false,
-      "name" : "Argentine Tango Club",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
       "description" : "We represent the Republican Party here on campus. We bring in speakers, host socials, and campaign during election years.",
       "eliminated" : false,
       "name" : "College Republicans",
@@ -91,13 +84,6 @@
       "votes": 0
     },
     {
-      "description" : "IEEE@UMD caters to the needs of both undergraduate and graduate Electrical and Computer Engineering students within the Clark School of Engineering.  This includes providing professional, social, and academic resources to our members, as well as a connection to the international IEEE community.",
-      "eliminated" : false,
-      "name" : "IEEE@UMD",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
       "description" : "UMD Pride Alliance exists to provide a safe and supportive environment for LGBTQ+ students within the University of Maryland, College Park community through community building, community advocacy, and cross-cultural education.",
       "eliminated" : false,
       "name" : "Pride Alliance",
@@ -105,23 +91,9 @@
       "votes": 0
     },
     {
-      "description" : "The UMD Chapter of Oxfam America- a nonprofit dedicated towards eradicating hunger, poverty, and social injustice.",
-      "eliminated" : false,
-      "name" : "OxfamUMD",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
       "description" : "We've been tossing around discs since 93'.",
       "eliminated" : false,
       "name" : "Men's Club Ultimate Frisbee",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
-      "description" : "We increase education, raise awareness, and promote advocacy of mental health on the UMD campus.  Our goal is promote reducing stigma against mental illness and to open up the conversation on mental health on our campus.",
-      "eliminated" : false,
-      "name" : "Active Minds at Maryland",
       "competitor": " ",
       "votes": 0
     },
@@ -147,27 +119,6 @@
       "votes": 0
     },
     {
-      "description" : "UMD withpurpose is dedicated to raising awareness of the lack of funding that is allocated to pediatric cancer each year by encouraging and invigorating student leaders on our campus to come up with creative ways to spread awareness of the issue. Our unique, student-led approach helps us stand out from other groups and connects young children with young adults to create the next generation of pediatric cancer advocates.",
-      "eliminated" : false,
-      "name" : "UMD withpurpose",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
-      "description" : "After being dormant for a couple years, Friends of the Co-op is BACK to provide socially progressive students with a space for artistic and musical expression, activism, and community.",
-      "eliminated" : false,
-      "name" : "Friends of the Co-op",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
-      "description" : "We broader the perspective of members interested in economics and finance on an international scale by providing interactive content and experiences that adapt with the dynamic global landscape. We are the number #1 ranked club in the business school based on a culmination of membership, collaboration, event quality, and event quantity.",
-      "eliminated" : false,
-      "name" : "International Economics & Finance Society",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
       "description" : "The pinnacle of fraternal and professional societies, centered on the potential of each brother, the unquenchable thirst for personal development and the lifelong values of friendship, sound learning and rectitude.",
       "eliminated" : false,
       "name" : "Phi Delta Theta",
@@ -178,13 +129,6 @@
       "description" : "We represent the Divine Nine organizations on our campus. Formed in 1930, we oversee all nine predominantly Black fraternities and Sororities.",
       "eliminated" : false,
       "name" : "National Pan-Hellenic Council",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
-      "description" : "Delta Phi Epsilon is a social sorority that works to raise awareness and money for Cystic Fibrosis and Anorexia Nervosa and Associated Disorders. We foster inclusion and sisterhood and work to be active participants in the Greek community.",
-      "eliminated" : false,
-      "name" : "Delta Phi Epsilon",
       "competitor": " ",
       "votes": 0
     },
@@ -241,20 +185,6 @@
       "description" : "We are a group of individuals who pride themselves on striving to be better men in the community, in the classroom, and in our philanthropic endeavors. Last year we won the presidents cup for our achievements on campus and even after that we strive to be greater.",
       "eliminated" : false,
       "name" : "The Delta Sigma Phi Fraternity",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
-      "description" : "Placing story-telling, empathy, and community at the forefront of global health journalism.",
-      "eliminated" : false,
-      "name" : "On Call Magazine",
-      "competitor": " ",
-      "votes": 0
-    },
-    {
-      "description" : "We are a social welfare nonprofit benefitting students with physical disabilities in Sri Lanka through educational grants, self-employment initiatives, and mentorship programs.",
-      "eliminated" : false,
-      "name" : "The Motion Project",
       "competitor": " ",
       "votes": 0
     },

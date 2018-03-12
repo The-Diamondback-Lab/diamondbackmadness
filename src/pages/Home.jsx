@@ -8,14 +8,16 @@ export default class Home extends Component {
 
   componentDidMount() {
     let header = document.getElementById('header');
-    header.style.backgroundColor = 'transparent';
-    header.style.position = 'absolute';
-    header.style.zIndex = 10;
+    header
+      .classList
+      .add('home');
   }
 
   componentWillUnmount() {
     let header = document.getElementById('header');
-    header.style.position = 'relative';
+    header
+      .classList
+      .remove('home');
   }
 
   render() {
