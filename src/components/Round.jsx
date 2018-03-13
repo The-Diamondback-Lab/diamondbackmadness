@@ -86,19 +86,19 @@ export default class Round extends Component {
     let title;
     switch (this.props.week) {
       case 1:
-        title = 'March 16 - 20th';
+        title = 'March 17 - 21st';
         break;
       case 2:
-        title = 'March 20 - 24th';
+        title = 'March 21 - 25th';
         break;
       case 3:
-        title = 'March 24 - 28th';
+        title = 'March 25 - 29th';
         break;
       case 4:
-        title = 'March 28 - 30th';
+        title = 'March 29 - 31st';
         break;
       default:
-        title = 'March 12 - 16th';
+        title = 'March 13 - 17th';
         break;
     }
 
