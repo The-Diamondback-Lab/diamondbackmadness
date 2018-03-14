@@ -42,10 +42,6 @@ export default class VoteButton extends Component {
         .getElementById(id)
         .classList
         .add('clicked');
-      document
-        .getElementById(id)
-        .style
-        .backgroundColor = '#e31936';
     } else {
       document
         .getElementById(id)
@@ -68,7 +64,11 @@ export default class VoteButton extends Component {
     ).replace(/ /g, '');
     let button;
     if (localStorage.getItem(matchId1) || localStorage.getItem(matchId2)) {
-      button = <button className='btn vote-btn voted' id={id} onClick={(e) => e.preventDefault()} disabled>VOTED</button>
+      button = <button
+        className='btn vote-btn voted'
+        id={id}
+        onClick={(e) => e.preventDefault()}
+        disabled="disabled">VOTED</button>
     } else {
       button = <button
         className='btn vote-btn'
@@ -76,9 +76,15 @@ export default class VoteButton extends Component {
         onClick={(e) => {
           this.setState({clicked: true});
           this.updateVotes(e);
-          let otherButton = "vote-"+(this.props.participant.competitor.replace(/\s/g, ''));
-          document.getElementById(otherButton).disabled = true;
-          document.getElementById(otherButton).innerHTML = "VOTED";
+          let otherButton = "vote-" + (
+            this.props.participant.competitor.replace(/\s/g, '')
+          );
+          document
+            .getElementById(otherButton)
+            .disabled = true;
+          document
+            .getElementById(otherButton)
+            .innerHTML = "VOTED";
           localStorage.setItem(matchId1, true);
           localStorage.setItem(matchId2, true);
         }}>CAST YOUR VOTE</button>

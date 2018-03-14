@@ -2,7 +2,7 @@
 
 #home
   +flex(row, center, center)
-  +setBkgImg("/assets/img/home-bkg.jpg", center center, cover)
+  +setBkgImg("../assets/img/home-bkg.jpg", center center, cover)
 
   width: 100vw
   height: 100vh
@@ -25,9 +25,10 @@
     h1
       align-self: flex-start
       color: $black
-      font-size: 7.5em
+      font-size: 7em
       line-height: 0.9em
-      margin: 0 0 1.25em 0
+      margin: 0 0 1em 0
+      text-transform: uppercase
 
       /* height media queries */
       @media all and (max-height: 415px)
@@ -53,7 +54,7 @@
 
       align-self: flex-end
       color: $white
-      font-size: 1.25em
+      font-size: 1.35em
 
       /* height media queries */
       @media all and (max-height: 415px)

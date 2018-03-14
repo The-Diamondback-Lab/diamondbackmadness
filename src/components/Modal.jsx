@@ -26,7 +26,11 @@ export default class Modal extends Component {
     for (let i = 0; i < comps.length; i++) {
       if (this.props.active) {
         buttons.push(
-          <VoteButton key={i} week={this.props.week} participant={comps[i]} matchId = {this.props.matchId}/>
+          <VoteButton
+            key={i}
+            week={this.props.week}
+            participant={comps[i]}
+            matchId={this.props.matchId}/>
         );
       } else {
         buttons.push(
@@ -40,7 +44,7 @@ export default class Modal extends Component {
     }
 
     let activeModal = <div className='modal'>
-      <div className='modal-overlay'></div>
+      <div role='button' onClick={this.props.onClose} className='modal-overlay'></div>
       <div className='modal-guts'>
         <a onClick={this.props.onClose} id='close'>
           &times;
@@ -62,7 +66,7 @@ export default class Modal extends Component {
     </div>;
 
     let nonActiveModal = <div className='modal'>
-      <div className='modal-overlay'></div>
+      <div role='button' onClick={this.props.onClose} className='modal-overlay'></div>
       <div className='modal-guts'>
         <a onClick={this.props.onClose} id='close'>
           &times;

@@ -49,7 +49,7 @@ export default class Round extends Component {
     let numMatches = this.getNumMatches();
     let matches = [];
 
-    if (!this.props.active){
+    if (!this.props.active) {
       for (let i = 0; i < numMatches; i++) {
         matches.push(
           <Match
@@ -64,11 +64,10 @@ export default class Round extends Component {
       return matches;
     }
 
-
     if (this.props.participants.length != 1) {
       let max = this.props.participants.length;
-      if (this.props.bye){
-        for (let i = 0; i < max; i++){
+      if (this.props.bye) {
+        for (let i = 0; i < max; i++) {
           let comp1 = this
             .props
             .participants[i];
@@ -83,8 +82,7 @@ export default class Round extends Component {
               bye={true}/>
           );
         }
-      }
-      else {
+      } else {
 
         for (let i = 0; i < max / 2; i++) {
           let comp1 = this
@@ -135,17 +133,13 @@ export default class Round extends Component {
         title = 'March 31st - April 1st';
         break;
       default:
-        title = 'March 13 - 17th';
+        title = 'March 14 - 17th';
         break;
     }
 
     return (
-      // if (matches == []){
-      //   let matches = <h3>Coming Soon!</h3>
-      // }
-      // else{
-      //   let matches = this.getMatches();
-      // }
+      // if (matches == []){   let matches = <h3>Coming Soon!</h3> } else{   let
+      // matches = this.getMatches(); }
       <div className={style}>
         <h4 id={id} className='round-title'>{title}</h4>
         <div className='match-container'>

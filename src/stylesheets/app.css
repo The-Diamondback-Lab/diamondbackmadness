@@ -36,7 +36,7 @@ html {
 
 html, body {
   overflow: scroll;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Solano";
   color: #252525;
   margin: 0; }
 
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6, ol, ul {
   font-weight: 700; }
 
 p, a, li {
-  font-weight: 500; }
+  font-weight: 400; }
 
 a {
   text-decoration: none; }
@@ -56,11 +56,25 @@ button {
   outline: none; }
 
 /* FONTS - FONTS.SASS */
+@font-face {
+  font-family: 'Solano';
+  font-weight: 700;
+  src: url("../assets/fonts/SolanoGothicMVB-Bd.otf"); }
+
+@font-face {
+  font-family: 'Solano';
+  font-weight: 400;
+  src: url("../assets/fonts/SolanoGothicMVB-Md.otf"); }
+
 /* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SASS */
 /* BUTTON STYLES - BUTTON.SASS */
 .btn {
+  background-color: #252525;
+  color: #FFFFFF;
   padding: .9em 2.75em; }
   .btn:hover, .btn:active, .btn:focus {
+    background-color: #e31936 !important;
+    cursor: pointer;
     font-weight: 700; }
 
 #disabled {
@@ -98,7 +112,7 @@ header {
         -ms-flex-pack: justify;
             justify-content: space-between; }
     header #header-wrapper #title {
-      font-size: .8em; }
+      font-size: 1.1em; }
       header #header-wrapper #title:hover {
         letter-spacing: .5em; }
       @media all and (max-width: 615px) {
@@ -215,12 +229,13 @@ header {
   width: 100vw;
   z-index: 10 !important; }
   .modal .modal-overlay {
-    display: none;
     background-color: rgba(37, 37, 37, 0.25);
     position: fixed;
     height: 100%;
     width: 100%;
     z-index: 11; }
+    .modal .modal-overlay:hover, .modal .modal-overlay:active, .modal .modal-overlay:focus {
+      cursor: pointer; }
   .modal .modal-guts {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -249,13 +264,15 @@ header {
       margin: .5em 0; }
       @media all and (max-width: 500px) {
         .modal .modal-guts h1 {
-          font-size: 1.5em;
-          margin: 0 0 -.5em 0; } }
+          font-size: 1.5em !important;
+          margin: 0 0 -1em 0; } }
     .modal .modal-guts #close {
       -ms-flex-item-align: end;
           align-self: flex-end;
       color: #252525;
       font-size: 2.5em; }
+      .modal .modal-guts #close:hover, .modal .modal-guts #close:active, .modal .modal-guts #close:focus {
+        cursor: pointer; }
       .modal .modal-guts #close span {
         font-size: 2.75em;
         margin: 0; }
@@ -272,7 +289,8 @@ header {
               align-items: flex-start;
       -webkit-box-pack: space-evenly;
           -ms-flex-pack: space-evenly;
-              justify-content: space-evenly; }
+              justify-content: space-evenly;
+      width: 100%; }
       @media all and (max-width: 1080px) {
         .modal .modal-guts .competitors {
           display: -webkit-box !important;
@@ -308,12 +326,12 @@ header {
         margin: 1em 0;
         overflow: scroll;
         padding-left: 1.5em;
-        width: 50%; }
+        width: 50% !important; }
         @media all and (max-width: 1080px) {
           .modal .modal-guts .competitors .comp {
             height: auto;
             padding: 0 0 1em 0 !important;
-            width: 100%; } }
+            width: 100% !important; } }
         .modal .modal-guts .competitors .comp h2 {
           margin: 0; }
         @media all and (max-width: 500px) {
@@ -321,7 +339,8 @@ header {
             font-size: .85em; } }
         .modal .modal-guts .competitors .comp .description {
           font-size: .95em;
-          margin: -1em 0; }
+          margin: -1em 0;
+          overflow-y: scroll !important; }
           @media all and (max-width: 1080px) {
             .modal .modal-guts .competitors .comp .description {
               margin: 1em 0; } }
@@ -330,15 +349,12 @@ header {
               font-size: 1.05em; } }
         .modal .modal-guts .competitors .comp .vote-btn {
           -ms-flex-item-align: end;
-              align-self: flex-end;
-          background-color: #252525;
-          color: #FFFFFF; }
-          .modal .modal-guts .competitors .comp .vote-btn:hover {
-            cursor: pointer;
-            background-color: #c1152e; }
+              align-self: flex-end; }
           @media all and (max-width: 500px) {
             .modal .modal-guts .competitors .comp .vote-btn {
               font-size: .95em; } }
+        .modal .modal-guts .competitors .comp .voted {
+          background-color: #e31936 !important; }
     .modal .modal-guts .winner-name {
       -ms-flex-item-align: end;
           align-self: flex-end;
@@ -347,9 +363,6 @@ header {
       margin-top: -1em;
       padding: .9em 2.75em;
       text-transform: uppercase; }
-
-.clicked {
-  background-color: #e31936 !important; }
 
 /* PARICIPANT STYLES - PARICIPANT.SASS */
 .participant {
@@ -377,7 +390,7 @@ header {
   .participant:first-of-type {
     border-bottom: 2px solid rgba(37, 37, 37, 0.15); }
   .participant .p-name {
-    font-size: .95em;
+    font-size: 1em;
     font-weight: 700;
     margin: 0;
     text-align: left;
@@ -437,7 +450,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("/assets/img/home-bkg.jpg");
+  background-image: url("../assets/img/home-bkg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -471,9 +484,10 @@ header {
       -ms-flex-item-align: start;
           align-self: flex-start;
       color: #252525;
-      font-size: 7.5em;
+      font-size: 7em;
       line-height: 0.9em;
-      margin: 0 0 1.25em 0;
+      margin: 0 0 1em 0;
+      text-transform: uppercase;
       /* height media queries */
       /* width media queries */ }
       @media all and (max-height: 415px) {
@@ -498,7 +512,7 @@ header {
       -ms-flex-item-align: end;
           align-self: flex-end;
       color: #FFFFFF;
-      font-size: 1.25em;
+      font-size: 1.35em;
       /* height media queries */
       /* width media queries */ }
       #home .wrapper #btn-home:hover {
@@ -561,6 +575,7 @@ header {
           display: none !important; } }
       #vote #vote-wrapper .round-titles .round-title {
         color: rgba(37, 37, 37, 0.75);
+        font-size: 1.1em;
         font-weight: 500;
         margin: 0;
         text-align: center;

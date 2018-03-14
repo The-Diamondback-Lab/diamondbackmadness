@@ -11,12 +11,15 @@
   z-index: 10 !important
 
   .modal-overlay
-    display: none
+    //display: none
     background-color: rgba($black, .25)
     position: fixed
     height: 100%
     width: 100%
     z-index: 11
+
+    +hocus
+      cursor: pointer
 
   .modal-guts
     +flex(column, flex-start, space-evenly)
@@ -35,21 +38,23 @@
       margin: .5em 0
 
       @media all and (max-width: 500px)
-        font-size: 1.5em
-        margin: 0 0 -.5em 0
+        font-size: 1.5em !important
+        margin: 0 0 -1em 0
 
 
     #close
       align-self: flex-end
       color: $black
       font-size: 2.5em
-
+      +hocus
+        cursor: pointer
       span
         font-size: 2.75em
         margin: 0
 
     .competitors
       +flex(row, flex-start, space-evenly)
+      width: 100%
 
       @media all and (max-width: 1080px)
         +flex(column, stretch, flex-start)
@@ -63,12 +68,12 @@
         margin: 1em 0
         overflow: scroll
         padding-left: 1.5em
-        width: 50%
+        width: 50% !important
 
         @media all and (max-width: 1080px)
           height: auto
           padding: 0 0 1em 0 !important
-          width: 100%
+          width: 100% !important
 
         h2
           margin: 0
@@ -79,6 +84,7 @@
         .description
           font-size: .95em
           margin: -1em 0
+          overflow-y: scroll !important
 
           @media all and (max-width: 1080px)
             margin: 1em 0
@@ -88,14 +94,12 @@
 
         .vote-btn
           align-self: flex-end
-          background-color: $black
-          color: $white
-          &:hover
-            cursor: pointer
-            background-color: darken($red, 7.5%)
 
           @media all and (max-width: 500px)
             font-size: .95em
+
+        .voted
+        	background-color: $red !important
 
     .winner-name
       align-self: flex-end
@@ -104,7 +108,3 @@
       margin-top: -1em
       padding: .9em 2.75em
       text-transform: uppercase
-
-
-.clicked
-  background-color: $red !important

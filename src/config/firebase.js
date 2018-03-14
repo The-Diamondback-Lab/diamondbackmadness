@@ -20,7 +20,4 @@ const DATABASE = firebase
   .initializeApp(config)
   .database();
 
-// firebase.database.enableLogging((message) => {   console.log("[FIREBASE]",
-// message); });
-
 export default DATABASE;

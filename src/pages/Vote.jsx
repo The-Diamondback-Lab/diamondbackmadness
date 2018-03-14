@@ -21,8 +21,10 @@ export default class Vote extends Component {
       week5: []
     }
 
-    this.ads = ["/assets/img/0.jpg","/assets/img/1.gif","/assets/img/2.gif","/assets/img/3.gif"];
-    this.ads.sort(() => Math.random() * 2 - 1); //shuffle list of ad numbers
+    this.ads = ["/assets/img/0.jpg", "/assets/img/1.gif", "/assets/img/2.gif", "/assets/img/3.gif"];
+    this
+      .ads
+      .sort(() => Math.random() * 2 - 1); //shuffle list of ad numbers
   }
 
   componentWillMount = () => {
@@ -96,19 +98,19 @@ export default class Vote extends Component {
         });
       });
 
-      DATABASE
-        .ref('/5/')
-        .orderByKey()
-        .once('value')
-        .then((snapshot) => {
-          snapshot.forEach((child) => {
-            let state = this
-              .state
-              .week5
-              .concat(child.val());
-            this.setState({week5: state})
-          });
+    DATABASE
+      .ref('/5/')
+      .orderByKey()
+      .once('value')
+      .then((snapshot) => {
+        snapshot.forEach((child) => {
+          let state = this
+            .state
+            .week5
+            .concat(child.val());
+          this.setState({week5: state})
         });
+      });
   }
 
   componentDidMount = () => {
@@ -127,25 +129,26 @@ export default class Vote extends Component {
 
   render = () => {
 
-    let ad1 =
-    (
-    <div className = 'ads'>
-      <img className = 'box' src = {this.ads[0]} alt="ad" />
-      <img className = 'box' src = {this.ads[1]} alt="ad" />
-      <img className = 'box' src = {this.ads[2]} alt="ad" />
-      <img className = 'box' src = {this.ads[3]} alt="ad" />
-    </div>);
-
-    let ad2 =
-    ( <a href = "http://www.vietowers.com" target = "_blank">
-      <div className = 'ads'>
-        <img className = 'banner' src = "/assets/img/banner1.jpg" alt="ad" />
+    let ad1 = (
+      <div className='ads'>
+        <img className='box' src={this.ads[0]} alt="ad"/>
+        <img className='box' src={this.ads[1]} alt="ad"/>
+        <img className='box' src={this.ads[2]} alt="ad"/>
+        <img className='box' src={this.ads[3]} alt="ad"/>
       </div>
-      </a>);
+    );
+
+    let ad2 = (
+      <a href="http://www.vietowers.com" target="_blank">
+        <div className='ads'>
+          <img className='banner' src="/assets/img/banner1.jpg" alt="ad"/>
+        </div>
+      </a>
+    );
 
     var x = Math.floor((Math.random() * 2));
 
-    if (x == 1){
+    if (x === 1) {
       let temp = ad1;
       ad1 = ad2;
       ad2 = temp;
@@ -153,28 +156,38 @@ export default class Vote extends Component {
     return (
       <div id="vote">
         <div className='wrapper' id='vote-wrapper'>
-          <h1>Welcome to Diamondback Madness!<br /> Round 1 is live and closes on March 17 at 8 p.m. Vote below to support an organization</h1>
+          <h1>
+            Welcome to Diamondback Madness!
+            <br/>
+            Round 1 is live and closes on March 17 at 8 p.m. Vote below to support an
+            organization.
+          </h1>
 
           {ad1}
-          <a href = "http://www.vietowers.com" target = "_blank">
-          <div className = 'ads'>
-              <img className = 'banner' src = "/assets/img/banner2.jpg" alt="ad" />
-          </div>
+          <a href="http://www.vietowers.com" target="_blank">
+            <div className='ads'>
+              <img className='banner' src="/assets/img/banner2.jpg" alt="ad"/>
+            </div>
           </a>
 
-
           <div className='round-titles'>
-            <h4 className='round-title'>Round 1: March 14 - 17th</h4>
-            <h4 className='round-title'>Round 2: March 17 - 21st</h4>
-            <h4 className='round-title'>Round 3: March 21 - 25th</h4>
-            <h4 className='round-title'>Round 4: March 25 - 29th</h4>
-            <h4 className='round-title'>Round 5: March 29 - 31st</h4>
-            <h4 className='round-title'>Round 6: March 31 - April 1st</h4>
+            <h4 className='round-title'>Round 1:
+              <br/>March 14 - 17th</h4>
+            <h4 className='round-title'>Round 2:
+              <br/>March 17 - 21st</h4>
+            <h4 className='round-title'>Round 3:
+              <br/>March 21 - 25th</h4>
+            <h4 className='round-title'>Round 4:
+              <br/>March 25 - 29th</h4>
+            <h4 className='round-title'>Round 5:
+              <br/>March 29 - 31st</h4>
+            <h4 className='round-title'>Round 6:
+              <br/>March 31 - April 1st</h4>
           </div>
 
           <div className='rounds'>
-            <Round week={0} active={true} participants={this.state.week0} />
-            <Round week={1} active={true} participants={this.state.week1} bye={true} />
+            <Round week={0} active={true} participants={this.state.week0}/>
+            <Round week={1} active={true} participants={this.state.week1} bye={true}/>
             <Round week={2} active={false} participants={this.state.week2}/>
             <Round week={3} active={false} participants={this.state.week3}/>
             <Round week={4} active={false} participants={this.state.week4}/>
