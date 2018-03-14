@@ -21,7 +21,21 @@ export default class Vote extends Component {
       week5: []
     }
 
-    this.ads = ["/assets/img/0.jpg", "/assets/img/1.gif", "/assets/img/2.gif", "/assets/img/3.gif"];
+    this.ads = [
+      {
+        image: "/assets/img/0.jpg",
+        link: "http://www.jasonsdeli.com"
+      }, {
+        image: "/assets/img/1.gif",
+        link: "http://www.platosclosetlaurel.com"
+      }, {
+        image: "/assets/img/2.gif",
+        link: "http://www.woodsflowersandgifts.com"
+      }, {
+        image: "/assets/img/3.gif",
+        link: "http://www.terrapinyearbook.com"
+      }
+    ];
     this
       .ads
       .sort(() => Math.random() * 2 - 1); //shuffle list of ad numbers
@@ -129,31 +143,29 @@ export default class Vote extends Component {
 
   render = () => {
 
-    let ad1 = (
-      <div className='ads'>
-        <img className='box' src={this.ads[0]} alt="ad"/>
-        <img className='box' src={this.ads[1]} alt="ad"/>
-        <img className='box' src={this.ads[2]} alt="ad"/>
-        <img className='box' src={this.ads[3]} alt="ad"/>
-      </div>
-    );
-
-    let ad2 = (
-      <a href="http://www.vietowers.com" target="_blank">
-        <div className='ads'>
-          <img className='banner' src="/assets/img/banner1.jpg" alt="ad"/>
-        </div>
-      </a>
-    );
-
-    var x = Math.floor((Math.random() * 2));
-
-    if (x === 1) {
-      let temp = ad1;
-      ad1 = ad2;
-      ad2 = temp;
-    }
-    return (
+    <<<<<<< HEAD let ad1 = ( <div className='ads'> <img className='box'
+      src={this.ads[0]} alt="ad"/> <img className='box' src={this.ads[1]} alt="ad"/>
+      <img className='box' src={this.ads[2]} alt="ad"/> <img className='box'
+      src={this.ads[3]} alt="ad"/> </div> ); let ad2 = ( <a
+      href="http://www.vietowers.com" target="_blank"> <div className='ads'> <img
+      className='banner' src="/assets/img/banner1.jpg" alt="ad"/> </div> </a> );
+      ======= let ad1 = ( <div className = 'ads'> <a href = {this.ads[0].link} target
+      = "_blank"><div><img className = 'box' src = {this.ads[0].image} alt="ad"
+      /></div></a> <a href = {this.ads[1].link}target = "_blank"><div><img className =
+      'box' src = {this.ads[1].image} alt="ad" /></div></a> <a href =
+      {this.ads[2].link} target = "_blank"><div><img className = 'box' src =
+      {this.ads[2].image} alt="ad" /></div></a> <a href = {this.ads[3].link} target =
+      "_blank"><div><img className = 'box' src = {this.ads[3].image} alt="ad"
+      /></div></a> </div>); let ad2 = ( <div className = 'ads'> <a href =
+      "http://www.vietowers.com" target = "_blank"><img className = 'banner' src =
+      "/assets/img/banner1.jpg" alt="ad" /></a> </div> ); >>>>>>>
+        3eab7872754b25534f4f93610032042d3d386709 var x = Math.floor((Math.random() *
+        2)); if (x === 1) {
+        let temp = ad1;
+        ad1 = ad2;
+        ad2 = temp;
+      }
+      return (
       <div id="vote">
         <div className='wrapper' id='vote-wrapper'>
           <h1>
@@ -164,11 +176,11 @@ export default class Vote extends Component {
           </h1>
 
           {ad1}
-          <a href="http://www.vietowers.com" target="_blank">
-            <div className='ads'>
-              <img className='banner' src="/assets/img/banner2.jpg" alt="ad"/>
-            </div>
-          </a>
+          <<<<<<< HEAD <a href="http://www.vietowers.com" target="_blank"> <div
+          className='ads'> <img className='banner' src="/assets/img/banner2.jpg"
+          alt="ad"/> </div> </a> ======= <div className = 'ads'> <a href =
+          "http://www.vietowers.com" target = "_blank"><img className = 'banner' src =
+          "/assets/img/banner2.jpg" alt="ad" /></a> </div> >>>>>>> 3eab7872754b25534f4f93610032042d3d386709
 
           <div className='round-titles'>
             <h4 className='round-title'>Round 1:
@@ -197,6 +209,6 @@ export default class Vote extends Component {
           {ad2}
         </div>
       </div>
-    );
+      );
   }
 }

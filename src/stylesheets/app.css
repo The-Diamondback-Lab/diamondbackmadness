@@ -595,19 +595,18 @@ header {
               justify-content: center;
       margin-bottom: 1%; }
     #vote #vote-wrapper .box {
-      width: 10%;
-      height: 7%; }
+      width: 10em;
+      height: 10em; }
       @media all and (max-width: 900px) {
         #vote #vote-wrapper .box {
-          width: 20%;
-          height: 15%; } }
+          width: 5em;
+          height: 5em; } }
     #vote #vote-wrapper .banner {
-      width: 40%;
-      height: 5%; }
+      width: 40em; }
       @media all and (max-width: 900px) {
         #vote #vote-wrapper .banner {
-          width: 80%;
-          height: 15%; } }
+          width: 20em;
+          height: 4em; } }
     #vote #vote-wrapper .rounds {
       display: -webkit-box !important;
       display: -ms-flexbox !important;
