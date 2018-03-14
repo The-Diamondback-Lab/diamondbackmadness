@@ -21,7 +21,11 @@ export default class Vote extends Component {
       week5: []
     }
 
-    this.ads = ["/assets/img/0.jpg","/assets/img/1.gif","/assets/img/2.gif","/assets/img/3.gif"];
+    this.ads =
+    [{image: "/assets/img/0.jpg", link: "http://www.jasonsdeli.com"},
+    {image: "/assets/img/1.gif", link: "http://www.platosclosetlaurel.com"},
+    {image: "/assets/img/2.gif", link: "http://www.woodsflowersandgifts.com"},
+    {image: "/assets/img/3.gif", link: "http://www.terrapinyearbook.com"}];
     this.ads.sort(() => Math.random() * 2 - 1); //shuffle list of ad numbers
   }
 
@@ -130,18 +134,18 @@ export default class Vote extends Component {
     let ad1 =
     (
     <div className = 'ads'>
-      <img className = 'box' src = {this.ads[0]} alt="ad" />
-      <img className = 'box' src = {this.ads[1]} alt="ad" />
-      <img className = 'box' src = {this.ads[2]} alt="ad" />
-      <img className = 'box' src = {this.ads[3]} alt="ad" />
+      <a href = {this.ads[0].link} target = "_blank"><div><img className = 'box' src = {this.ads[0].image} alt="ad" /></div></a>
+      <a href = {this.ads[1].link}target = "_blank"><div><img className = 'box' src = {this.ads[1].image} alt="ad" /></div></a>
+      <a href = {this.ads[2].link} target = "_blank"><div><img className = 'box' src = {this.ads[2].image} alt="ad" /></div></a>
+      <a href = {this.ads[3].link} target = "_blank"><div><img className = 'box' src = {this.ads[3].image} alt="ad" /></div></a>
     </div>);
 
     let ad2 =
-    ( <a href = "http://www.vietowers.com" target = "_blank">
+    (
       <div className = 'ads'>
-        <img className = 'banner' src = "/assets/img/banner1.jpg" alt="ad" />
+        <a href = "http://www.vietowers.com" target = "_blank"><img className = 'banner' src = "/assets/img/banner1.jpg" alt="ad" /></a>
       </div>
-      </a>);
+    );
 
     var x = Math.floor((Math.random() * 2));
 
@@ -156,11 +160,9 @@ export default class Vote extends Component {
           <h1>Welcome to Diamondback Madness!<br /> Round 1 is live and closes on March 17 at 8 p.m. Vote below to support an organization</h1>
 
           {ad1}
-          <a href = "http://www.vietowers.com" target = "_blank">
           <div className = 'ads'>
-              <img className = 'banner' src = "/assets/img/banner2.jpg" alt="ad" />
+              <a href = "http://www.vietowers.com" target = "_blank"><img className = 'banner' src = "/assets/img/banner2.jpg" alt="ad" /></a>
           </div>
-          </a>
 
 
           <div className='round-titles'>
