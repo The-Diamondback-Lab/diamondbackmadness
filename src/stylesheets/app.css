@@ -579,8 +579,23 @@ header {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+    #vote #vote-wrapper .ads {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-bottom: 1%; }
       @media all and (max-width: 900px) {
-        #vote #vote-wrapper .rounds {
+        #vote #vote-wrapper .ads {
           display: -webkit-box !important;
           display: -ms-flexbox !important;
           display: flex !important;
@@ -594,3 +609,6 @@ header {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center; } }
+    #vote #vote-wrapper h1 {
+      text-align: center;
+      font-family: "solano"; }

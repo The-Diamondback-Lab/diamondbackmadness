@@ -37,7 +37,7 @@ export default class VoteButton extends Component {
     if (this.state.clicked) {
       document
         .getElementById(id)
-        .value = 'CAST';
+        .value = 'VOTED';
       document
         .getElementById(id)
         .classList
@@ -58,12 +58,17 @@ export default class VoteButton extends Component {
   }
 
   render() {
+    let matchId1 = this.props.participant.name + this.props.participant.competitor;
+    matchId1 = matchId1.replace(/\s/g, '');
+    let matchId2 = this.props.participant.competitor + this.props.participant.name;
+    matchId2 = matchId2.replace(/\s/g, '');
+
     let id = 'vote-' + (
       this.props.participant.name
     ).replace(/ /g, '');
     let button;
-    if (this.state.clicked) {
-      button = <button className='btn vote-btn' id={id} onClick={(e) => e.preventDefault()}>CAST</button>
+    if (localStorage.getItem(matchId1) || localStorage.getItem(matchId2)) {
+      button = <button className='btn vote-btn voted' id={id} onClick={(e) => e.preventDefault()} disabled>VOTED</button>
     } else {
       button = <button
         className='btn vote-btn'
@@ -71,6 +76,11 @@ export default class VoteButton extends Component {
         onClick={(e) => {
           this.setState({clicked: true});
           this.updateVotes(e);
+          let otherButton = "vote-"+(this.props.participant.competitor.replace(/\s/g, ''));
+          document.getElementById(otherButton).disabled = true;
+          document.getElementById(otherButton).innerHTML = "VOTED";
+          localStorage.setItem(matchId1, true);
+          localStorage.setItem(matchId2, true);
         }}>CAST YOUR VOTE</button>
     }
 

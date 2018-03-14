@@ -26,7 +26,7 @@ export default class Modal extends Component {
     for (let i = 0; i < comps.length; i++) {
       if (this.props.active) {
         buttons.push(
-          <VoteButton key={i} week={this.props.week} participant={comps[i]}/>
+          <VoteButton key={i} week={this.props.week} participant={comps[i]} matchId = {this.props.matchId}/>
         );
       } else {
         buttons.push(

@@ -14,7 +14,8 @@ export default class Match extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      voted: false
     };
     this.toggleModal = this
       .toggleModal
@@ -22,7 +23,7 @@ export default class Match extends Component {
   }
 
   componentWillMount = () => {
-    if ((this.props.comp1 && this.props.comp2) !== null && this.props.week !== 4) {
+    if ((this.props.comp1 && this.props.comp2) !== null ) {
       Utilities
         .search(this.props.week, this.props.comp1.name)
         .then((key) => {
@@ -46,38 +47,47 @@ export default class Match extends Component {
   }
 
   render = () => {
-    let emptyMatch = (this.props.week !== 4)
-      ? <div className='match'>
-          <div className='participants'>
-            <Participant participant={null}/>
-            <Participant participant={null}/>
-          </div>
+    // let emptyMatch = (this.props.week !== 4)
+    //   ?
+    if (this.props.comp1 == null){
+      return <div></div>;
+    }
+
+      // : <div className='match'>
+      //   <div className='participants'>
+      //     <Participant participant={null}/>
+      //   </div>
+      // </div>;
+
+    if (!this.props.bye){
+      let match =
+      (<div className='match'>
+        <div className='participants' role='button' onClick={this.toggleModal}>
+          <Participant participant={this.props.comp1}/>
+          <Participant participant={this.props.comp2}/>
         </div>
-      : <div className='match'>
+        <Modal
+          active={this.props.active}
+          week={this.props.week}
+          show={this.state.isOpen}
+          onClose={this.toggleModal}
+          comp1={this.props.comp1}
+          comp2={this.props.comp2}
+          matchId={this.props.matchId}/>
+      </div>);
+      return (match);
+    } else {
+      let match =
+      (<div className='match bye'>
         <div className='participants'>
-          <Participant participant={null}/>
+          <Participant participant={this.props.comp1}/>
+          <Participant participant={this.props.comp2}/>
         </div>
-      </div>;
+      </div>);
+      return (match);
+    }
 
-    let populatedMatch = <div className='match'>
-      <div className='participants' role='button' onClick={this.toggleModal}>
-        <Participant participant={this.props.comp1}/>
-        <Participant participant={this.props.comp2}/>
-      </div>
-      <Modal
-        active={this.props.active}
-        week={this.props.week}
-        show={this.state.isOpen}
-        onClose={this.toggleModal}
-        comp1={this.props.comp1}
-        comp2={this.props.comp2}/>
-    </div>;
 
-    let match = (this.props.empty)
-      ? emptyMatch
-      : populatedMatch;
-
-    return (match);
   }
 
 }
