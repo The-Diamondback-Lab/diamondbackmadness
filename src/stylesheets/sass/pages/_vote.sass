@@ -22,15 +22,33 @@
         text-align: center
         width: 20%
 
+    h1
+      text-align: center
+      font-size: 2em
+      @media all and (max-width: 900px)
+        font-size: 1em
+
+    .ads
+      display: flex
+      justify-content: center
+      margin-bottom: 1%
+
+    .box
+      width: 10%
+      height: 7%
+      @media all and (max-width: 900px)
+        width: 20%
+        height: 15%
+
+    .banner
+      width: 40%
+      height: 5%
+      @media all and (max-width: 900px)
+        width: 80%
+        height: 15%
+
     .rounds
       +flex(row, stretch, center)
 
-    .ads
-      +flex(row, stretch, center)
-      margin-bottom: 1%
-
       @media all and (max-width: 900px)
         +flex(column, stretch, center)
-
-    h1
-      text-align: center

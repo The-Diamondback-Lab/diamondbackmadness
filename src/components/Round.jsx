@@ -50,8 +50,20 @@ export default class Round extends Component {
     let matches = [];
 
     if (!this.props.active){
-      return [];
+      for (let i = 0; i < numMatches; i++) {
+        matches.push(
+          <Match
+            key={i}
+            week={this.props.week}
+            active={this.props.active}
+            empty={true}
+            comp1={null}
+            comp2={null}/>
+        );
+      }
+      return matches;
     }
+
 
     if (this.props.participants.length != 1) {
       let max = this.props.participants.length;
@@ -95,19 +107,7 @@ export default class Round extends Component {
         }
       }
     }
-    else {
-      for (let i = 0; i < numMatches; i++) {
-        matches.push(
-          <Match
-            key={i}
-            week={this.props.week}
-            active={this.props.active}
-            empty={true}
-            comp1={null}
-            comp2={null}/>
-        );
-      }
-    }
+    console.log(matches);
     return matches;
   }
 

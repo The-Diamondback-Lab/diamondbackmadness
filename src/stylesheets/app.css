@@ -565,6 +565,34 @@ header {
         margin: 0;
         text-align: center;
         width: 20%; }
+    #vote #vote-wrapper h1 {
+      text-align: center;
+      font-size: 2em; }
+      @media all and (max-width: 900px) {
+        #vote #vote-wrapper h1 {
+          font-size: 1em; } }
+    #vote #vote-wrapper .ads {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-bottom: 1%; }
+    #vote #vote-wrapper .box {
+      width: 10%;
+      height: 7%; }
+      @media all and (max-width: 900px) {
+        #vote #vote-wrapper .box {
+          width: 20%;
+          height: 15%; } }
+    #vote #vote-wrapper .banner {
+      width: 40%;
+      height: 5%; }
+      @media all and (max-width: 900px) {
+        #vote #vote-wrapper .banner {
+          width: 80%;
+          height: 15%; } }
     #vote #vote-wrapper .rounds {
       display: -webkit-box !important;
       display: -ms-flexbox !important;
@@ -579,23 +607,8 @@ header {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-    #vote #vote-wrapper .ads {
-      display: -webkit-box !important;
-      display: -ms-flexbox !important;
-      display: flex !important;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-align: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      margin-bottom: 1%; }
       @media all and (max-width: 900px) {
-        #vote #vote-wrapper .ads {
+        #vote #vote-wrapper .rounds {
           display: -webkit-box !important;
           display: -ms-flexbox !important;
           display: flex !important;
@@ -609,6 +622,3 @@ header {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center; } }
-    #vote #vote-wrapper h1 {
-      text-align: center;
-      font-family: "solano"; }

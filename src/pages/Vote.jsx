@@ -126,18 +126,22 @@ export default class Vote extends Component {
   }
 
   render = () => {
+
     let ad1 =
-    (<div className = 'ads'>
-      <img className = 'ad' src = {this.ads[0]} width="10%" height="8%" alt="ad" />
-      <img className = 'ad' src = {this.ads[1]} width="10%" height="8%" alt="ad" />
-      <img className = 'ad' src = {this.ads[2]} width="10%" height="8%" alt="ad" />
-      <img className = 'ad' src = {this.ads[3]} width="10%" height="8%" alt="ad" />
+    (
+    <div className = 'ads'>
+      <img className = 'box' src = {this.ads[0]} alt="ad" />
+      <img className = 'box' src = {this.ads[1]} alt="ad" />
+      <img className = 'box' src = {this.ads[2]} alt="ad" />
+      <img className = 'box' src = {this.ads[3]} alt="ad" />
     </div>);
 
     let ad2 =
-    (<div className = 'ads'>
-        <img src = "/assets/img/banner1.jpg" width="40%" height="5%" alt="ad" />
-      </div>);
+    ( <a href = "http://www.vietowers.com" target = "_blank">
+      <div className = 'ads'>
+        <img className = 'banner' src = "/assets/img/banner1.jpg" alt="ad" />
+      </div>
+      </a>);
 
     var x = Math.floor((Math.random() * 2));
 
@@ -150,13 +154,17 @@ export default class Vote extends Component {
       <div id="vote">
         <div className='wrapper' id='vote-wrapper'>
           <h1>Welcome to Diamondback Madness!<br /> Round 1 is live and closes on March 17 at 8 p.m. Vote below to support an organization</h1>
+
           {ad1}
+          <a href = "http://www.vietowers.com" target = "_blank">
           <div className = 'ads'>
-            <img src = "/assets/img/banner2.jpg" width="40%" height="5%" alt="ad" />
+              <img className = 'banner' src = "/assets/img/banner2.jpg" alt="ad" />
           </div>
+          </a>
+
 
           <div className='round-titles'>
-            <h4 className='round-title'>Round 1: March 13 - 17th</h4>
+            <h4 className='round-title'>Round 1: March 14 - 17th</h4>
             <h4 className='round-title'>Round 2: March 17 - 21st</h4>
             <h4 className='round-title'>Round 3: March 21 - 25th</h4>
             <h4 className='round-title'>Round 4: March 25 - 29th</h4>

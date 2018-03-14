@@ -49,9 +49,6 @@ export default class Match extends Component {
   render = () => {
     // let emptyMatch = (this.props.week !== 4)
     //   ?
-    if (this.props.comp1 == null){
-      return <div></div>;
-    }
 
       // : <div className='match'>
       //   <div className='participants'>
@@ -59,7 +56,7 @@ export default class Match extends Component {
       //   </div>
       // </div>;
 
-    if (!this.props.bye){
+    if (!this.props.empty && !this.props.bye){
       let match =
       (<div className='match'>
         <div className='participants' role='button' onClick={this.toggleModal}>
