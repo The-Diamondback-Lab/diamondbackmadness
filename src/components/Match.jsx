@@ -56,12 +56,12 @@ export default class Match extends Component {
       //   </div>
       // </div>;
 
-    if (!this.props.empty && !this.props.bye){
+    if (!this.props.empty && !this.props.bye && !this.props.disabled){
       let match =
       (<div className='match'>
         <div className='participants' role='button' onClick={this.toggleModal}>
-          <Participant participant={this.props.comp1}/>
-          <Participant participant={this.props.comp2}/>
+          <Participant participant={this.props.comp1} info={true}/>
+          <Participant participant={this.props.comp2} info={true}/>
         </div>
         <Modal
           active={this.props.active}
@@ -77,8 +77,8 @@ export default class Match extends Component {
       let match =
       (<div className='match bye'>
         <div className='participants'>
-          <Participant participant={this.props.comp1}/>
-          <Participant participant={this.props.comp2}/>
+          <Participant participant={this.props.comp1} info={false}/>
+          <Participant participant={this.props.comp2} info={false}/>
         </div>
       </div>);
       return (match);

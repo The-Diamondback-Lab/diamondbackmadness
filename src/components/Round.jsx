@@ -97,6 +97,7 @@ export default class Round extends Component {
               matchId={i}
               active={this.props.active}
               week={this.props.week}
+              disabled={this.props.disabled}
               empty={false}
               comp1={comp1}
               comp2={comp2}
@@ -105,7 +106,6 @@ export default class Round extends Component {
         }
       }
     }
-    console.log(matches);
     return matches;
   }
 

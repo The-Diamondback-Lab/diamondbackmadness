@@ -59,12 +59,12 @@ button {
 @font-face {
   font-family: 'Solano';
   font-weight: 700;
-  src: url("../assets/fonts/SolanoGothicMVB-Bd.otf"); }
+  src: url("/assets/fonts/SolanoGothicMVB-Bd.otf"); }
 
 @font-face {
   font-family: 'Solano';
   font-weight: 400;
-  src: url("../assets/fonts/SolanoGothicMVB-Md.otf"); }
+  src: url("/assets/fonts/SolanoGothicMVB-Md.otf"); }
 
 /* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SASS */
 /* BUTTON STYLES - BUTTON.SASS */
@@ -379,14 +379,11 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #e31936;
+  background-color: #E8929F;
   border: none;
   color: rgba(255, 255, 255, 0.75);
   padding: 1em;
   outline: none; }
-  .participant:hover {
-    background-color: #cc1631;
-    cursor: pointer; }
   .participant:first-of-type {
     border-bottom: 2px solid rgba(37, 37, 37, 0.15); }
   .participant .p-name {
@@ -399,7 +396,16 @@ header {
     font-size: 1.25em; }
 
 .participant-empty {
-  color: #e31936; }
+  color: #E8929F; }
+
+.eliminated {
+  background-color: #E0E0E0; }
+
+.participant-active {
+  background-color: #e31936; }
+  .participant-active:hover {
+    background-color: #cc1631;
+    cursor: pointer; }
 
 /* BRACKET COLUMN STYLES - ROUND.SASS */
 .round {
@@ -450,7 +456,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("../assets/img/home-bkg.jpg");
+  background-image: url("/assets/img/home-bkg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
