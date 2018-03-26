@@ -199,7 +199,7 @@ export default class Vote extends Component {
           <h1>
             Welcome to Diamondback Madness!
             <br/>
-            Round 2 is live and closes on March 21 at 8 p.m.
+            Round 4 is live and closes on March 29 at 8 p.m.
             <br />
             Vote below to support a student organization. Groups are competing to earn $800 - $400 for themselves and $400 for the charity of their choice.
           </h1>
@@ -232,9 +232,9 @@ export default class Vote extends Component {
 
           <div className='rounds'>
             <Round week={0} active={true} disabled={true} participants={this.state.week0}/>
-            <Round week={1} active={true} participants={this.state.week1}/>
-            <Round week={2} active={false} participants={this.state.week2}/>
-            <Round week={3} active={false} participants={this.state.week3}/>
+            <Round week={1} active={true} disabled={true} participants={this.state.week1}/>
+            <Round week={2} active={true} disabled={true} participants={this.state.week2}/>
+            <Round week={3} active={true} participants={this.state.week3}/>
             <Round week={4} active={false} participants={this.state.week4}/>
             <Round week={5} active={false} participants={this.state.week5}/>
           </div>
