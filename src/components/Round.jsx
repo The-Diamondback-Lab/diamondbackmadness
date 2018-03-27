@@ -64,7 +64,7 @@ export default class Round extends Component {
       return matches;
     }
 
-    if (this.props.participants.length != 1) {
+    if (this.props.participants.length !== 1) {
       let max = this.props.participants.length;
       if (this.props.bye) {
         for (let i = 0; i < max; i++) {

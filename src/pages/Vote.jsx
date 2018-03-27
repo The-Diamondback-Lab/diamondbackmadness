@@ -184,7 +184,7 @@ export default class Vote extends Component {
     );
     let ad2 = (
       <div className='ads'>
-        <a href="http://www.vietowers.com" target="_blank"><img className='banner' src="/assets/img/banner1.jpg" alt="ad"/></a>
+        <a href="http://www.vietowers.com" target="_blank" rel="noopener noreferrer"><img className='banner' src="/assets/img/banner1.jpg" alt="ad"/></a>
       </div>
     );
     var x = Math.floor((Math.random() * 2));
@@ -200,12 +200,13 @@ export default class Vote extends Component {
             Welcome to Diamondback Madness!
             <br/>
             Round 4 is live and closes on March 29 at 8 p.m.
-            <br />
-            Vote below to support a student organization. Groups are competing to earn $800 - $400 for themselves and $400 for the charity of their choice.
+            <br/>
+            Vote below to support a student organization. Groups are competing to earn $800
+            - $400 for themselves and $400 for the charity of their choice.
           </h1>
 
           {ad1}
-          <a href="http://www.vietowers.com" target="_blank">
+          <a href="http://www.vietowers.com" target="_blank" rel="noopener noreferrer">
             <div className='ads'>
               <img className='banner' src="/assets/img/banner2.jpg" alt="ad"/>
             </div>
@@ -231,14 +232,40 @@ export default class Vote extends Component {
           </div>
 
           <div className='rounds'>
-            <Round week={0} active={true} disabled={true} participants={this.state.week0}/>
-            <Round week={1} active={true} disabled={true} participants={this.state.week1}/>
-            <Round week={2} active={true} disabled={true} participants={this.state.week2}/>
-            <Round week={3} active={true} participants={this.state.week3}/>
-            <Round week={4} active={false} participants={this.state.week4}/>
-            <Round week={5} active={false} participants={this.state.week5}/>
+            <Round
+              week={0}
+              active={true}
+              mobileActive={false}
+              disabled={true}
+              participants={this.state.week0}/>
+            <Round
+              week={1}
+              active={true}
+              mobileActive={false}
+              disabled={true}
+              participants={this.state.week1}/>
+            <Round
+              week={2}
+              active={true}
+              mobileActive={false}
+              disabled={true}
+              participants={this.state.week2}/>
+            <Round
+              week={3}
+              active={true}
+              mobileActive={true}
+              participants={this.state.week3}/>
+            <Round
+              week={4}
+              active={false}
+              mobileActive={false}
+              participants={this.state.week4}/>
+            <Round
+              week={5}
+              active={false}
+              mobileActive={false}
+              participants={this.state.week5}/>
           </div>
-
           {ad2}
         </div>
       </div>
